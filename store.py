@@ -22,12 +22,14 @@ def listItems():
         itemPrice = item['price']
         print(str(itemNum) + ' \t ' + itemName + ' \t ' + str(itemPrice))
 
+
 def addItem(menuChoice):
     global cart
     itemNum = menuChoice[2::]
     cart.append(itemNum)
     itemName = getItem(itemNum)['name']
     print(f'{itemName} has been added to your cart...')
+
 
 def showCart():
     global cart
